@@ -1,3 +1,11 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+// Responsive embeds
+.center img,
+.center object[type="image/svg+xml"] {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
