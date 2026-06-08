@@ -34,3 +34,7 @@ See [[SQVID]] for the technique.
 Just like Seeing, Showing relies on [[6 Ways of Seeing and Showing]]
 
 ![[4-step Process.excalidraw.svg]]
+
+# Connection to the [[Analysis Workflow Phases|Analysis Workflow]]
+
+The iterative process when after Showing we need to review the way we Look at the problem mirrors the process of [[Problem Framing]] and then [[Analytical Framing]] which can shift after we analyze the data. 

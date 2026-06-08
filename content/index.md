@@ -3,8 +3,9 @@ title: Welcome to the Analysis Garden
 ---
 Welcome to my digital garden dedicated to analysis.
 
-Here you can find guides on the following grand matters
+Here you can find guides on the following grand matters:
 
+* [[Analysis Workflow Phases|Analysis Workflow]]
 * [[What is Visual Thinking|Visual Thinking]]
 
 Cheers, 

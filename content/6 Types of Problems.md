@@ -4,6 +4,7 @@ tags:
 aliases:
   - type of problem
 ---
+This framework is used during [[Problem Framing]].
 ## 1. Who and what problems
 Challenges that relate to things, people, and roles.
 * What is going on around me, and where do I fit in?
