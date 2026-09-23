@@ -1,0 +1,6 @@
+---
+tags:
+  - ML
+aliases:
+  - SVM
+---

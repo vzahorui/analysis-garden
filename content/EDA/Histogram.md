@@ -6,6 +6,7 @@ tags:
 A visual tool for [[Exploratory Data Analysis Phases#Phase 1 Univariate analysis]]. 
 
 Meant to reveal modality (uni/bi/multi), skewness, floor/ceiling effects, impossible values.
+Allows spotting capped values.
 
 If the data is heavily skewed it makes sense to apply logarithmic transformation to the data. 
 ![[Histogram-1789836023100.webp]]

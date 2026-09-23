@@ -17,6 +17,6 @@ In terms of [[Mean Squared Error]], bias and Variance areits two components. See
 - **Bias** measures how far the average estimate $\mathbb{E}[\hat{\theta}]$ falls from the true value $\theta$ (systematic offset/accuracy).
 # Managing the Bias-Variance Tradeoff
 
-- **To lower Bias:** Increase model capacity (e.g., use a [[neural net]] or polynomial features), drop heavy regularization penalties, or engineer richer inputs.
+- **To lower Bias:** Increase model capacity (e.g., use a [[Neural Network]] or polynomial features), drop heavy regularization penalties, or engineer richer inputs.
 
 - **To lower Variance:** Gather more training data, simplify the model (feature selection/pruning), apply [[regularization]] ($L_1$/$L_2$), or use [[ensemble methods]] like Random Forests (bagging).

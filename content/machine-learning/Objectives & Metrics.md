@@ -13,7 +13,7 @@ aliases:
 - [[Mean Squared Error]] — Differentiable, sensitive to outliers.
 - [[Mean Absolute Error]] — Robust to outliers, non-differentiable at zero.
 - [[Huber Loss]] — Hybrid of MSE and MAE.
-- [[Root Mean Squared Error (RMSE)]] — Expressed in target variable units.
+- Root Mean Squared Error (RMSE) — Expressed in target variable units.
 
 ### Classification
 - [[Cross-Entropy]] — Measures distance between probability distributions.
