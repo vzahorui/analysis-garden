@@ -23,13 +23,14 @@ It is helpful when a downstream method assumes normality (for example, [[linear 
 
 The shape of the curve relative to the straight line tells you exactly how your data differs from the reference distribution:
 
-|**Pattern on Q-Q Plot**|**Visual Curve Shape**|**Interpretation**|
-|---|---|---|
-|**Straight line**|Points lie along the $45^\circ$ line|Data matches the target distribution well.|
-|**S-shape (Right curved at top, Left at bottom)**|Upward bend at high end, downward bend at low end|**Heavy tails:** Extreme values occur more frequently than expected.|
-|**Inverted S-shape**|Downward curve at top, upward at bottom|**Light tails:** Fewer extreme values than expected.|
-|**Concave (U-shaped)**|Both ends curve upward|**Right-skewed:** Data has a long tail to the right.|
-|**Convex (Inverted U)**|Both ends curve downward|**Left-skewed:** Data has a long tail to the left.|
+| **Pattern on Q-Q Plot**                           | **Visual Curve Shape**                            | **Interpretation**                                                   |
+| ------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------- |
+| **Straight line**                                 | Points lie along the $45^\circ$ line              | Data matches the target distribution well.                           |
+| **S-shape (Right curved at top, Left at bottom)** | Upward bend at high end, downward bend at low end | **Heavy tails:** Extreme values occur more frequently than expected. |
+| **Inverted S-shape**                              | Downward curve at top, upward at bottom           | **Light tails:** Fewer extreme values than expected.                 |
+| **Concave (U-shaped)**                            | Both ends curve upward                            | **Right-skewed:** Data has a long tail to the right.                 |
+| **Convex (Inverted U)**                           | Both ends curve downward                          | **Left-skewed:** Data has a long tail to the left.                   |
+
 ![[Q-Q Plot-1789928932444.webp]]
 ## Watch for
 

@@ -4,4 +4,5 @@ tags:
 aliases:
   - Neural Net
   - Neural Networks
+  - NN
 ---

@@ -14,6 +14,11 @@ $$z = \frac{x - \mu}{\sigma}$$
 - $x$: The original raw value.
 - $\mu$: The mean of the feature column.
 - $\sigma$: The standard deviation of the feature column.
+## Reasons for Standard Scaling
+
+* Some models rely on distance metrics across the features set. Having the same units of distance across all of them is essential. 
+* Models which use [[Gradient Descent]] benefit when the features space has the same units. It makes computation of gradient easier and the model reaches optimum faster.
+
 ## Key Properties
 
 - **Rescaling, Not Normalizing (Shape Preservation):** StandardScaler centers and rescales the data, but it does **not** alter the distribution shape. If a feature is skewed before scaling, it remains skewed after scaling.

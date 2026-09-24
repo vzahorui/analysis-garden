@@ -2,9 +2,7 @@
 tags:
   - ML
 aliases:
-  - metric
   - loss
-  - metrics
 ---
 ## Summary Comparison
 | Concept               | Primary Purpose                    | Differentiable? | Aggregation        |

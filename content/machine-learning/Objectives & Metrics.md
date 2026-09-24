@@ -3,6 +3,8 @@ tags:
   - statistics
   - ML
 aliases:
+  - metric
+  - metrics
 ---
 ## Core Distinctions
 - [[Loss vs Metric]] — Optimization focus vs. Human/Business evaluation.
