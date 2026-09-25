@@ -1,7 +1,6 @@
 ---
 tags:
-  - computer-vision
-  - ML
+  - ML/computer-vision
 aliases:
   - Computer Vision
   - CV

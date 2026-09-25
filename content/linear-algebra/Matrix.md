@@ -1,6 +1,8 @@
 ---
 tags:
   - linear-algebra
+aliases:
+  - matrices
 ---
 A **matrix** is a two-dimensional grid of real numbers arranged in rows and columns, denoted by boldface upper-case letters (e.g., $\mathbf{A}, \mathbf{B}, \mathbf{X}$).
 

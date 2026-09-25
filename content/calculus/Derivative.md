@@ -80,7 +80,7 @@ Also see [[Jacobian]] as a generalization for functions with multiple outputs.
 
 In [[Machine Learning Concepts|Machine Learning]] (ML), derivatives are the fundamental engine used to **train models**.
 
-Training an ML model (like a [[linear regression]] model or a deep [[neural network]]) is essentially an optimization problem: **How do we tweak the model's internal parameters (weights $w$ and biases $b$) so that its predictions are as accurate as possible?** This is achieved via [[Gradient Descent]].
+Training an ML model (like a [[linear regression]] model or a deep [[Neural Network]]) is essentially an optimization problem: **How do we tweak the model's internal parameters (weights $w$ and biases $b$) so that its predictions are as accurate as possible?** This is achieved via [[Gradient Descent]].
 
 # Second Derivative
 

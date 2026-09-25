@@ -1,6 +1,8 @@
 ---
 tags:
   - linear-algebra
+aliases:
+  - tensors
 ---
 A **tensor** is a multi-dimensional array of real numbers, generalizing [[Scalar|scalars]] ($0$-order tensors), [[Vector|vectors]] ($1\text{st}$-order tensors), and [[Matrix|matrices]] ($2\text{nd}$-order tensors) to arbitrary dimensions. Tensors are typically denoted by boldface calligraphic or sans-serif upper-case letters (e.g., $\mathbf{\mathcal{X}}, \mathbf{\mathcal{Y}}, \mathbf{\mathcal{A}}$).
 
