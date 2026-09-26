@@ -1,4 +1,4 @@
 ---
-location: Calculus
+title: Calculus
 ---
 A holding space for topics related to [[Calculus Concepts|calculus]]. 

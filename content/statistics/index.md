@@ -1,4 +1,4 @@
 ---
 title: Statistics
 ---
-A holding space for different concepts from math and statistical analysis.
+A holding space for different concepts from [[Statististical Concepts|Statistics]].
