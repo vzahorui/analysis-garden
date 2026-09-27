@@ -10,6 +10,10 @@ aliases:
 - [[Loss vs Metric]] — Optimization focus vs. Human/Business evaluation.
 - [[Residual vs Error]] — Sample residuals vs. Population theoretical errors.
 
+## Core Questions
+
+* [[Choise of a Scoring Metric]]
+
 ## Functions & Metrics Catalog
 ### Regression
 - [[Mean Squared Error]] — Differentiable, sensitive to outliers.

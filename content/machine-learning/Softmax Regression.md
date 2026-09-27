@@ -2,7 +2,7 @@
 tags:
   - ML/classification
 ---
-Softmax Regression is a generalization of [[Logistic Regression]] to multiple classes.
+Softmax Regression is a generalization of [[Logistic Regression]] to multiple classes [[Classification]].
 ## How Binary Logistic Regression Extends to Multi-Class
 
 In binary logistic regression, the model learns a single vector of weights $W$ to compute a single linear score $z$, which is then converted into a probability using the **Sigmoid function**:

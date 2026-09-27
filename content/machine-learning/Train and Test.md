@@ -44,7 +44,8 @@ The most common technique is **$K$-Fold Cross-Validation**:
 - **Stratified $K$-Fold:** Ensures class distribution (e.g., 80% class A, 20% class B) is identical in every fold—essential for imbalanced datasets.
 - **Time-Series Split:** Respects chronological order so future data is never used to predict past data.
 - **Leave-One-Out (LOOCV):** Uses $K = N$ (where $N$ is total sample size). High computational cost, but useful for tiny datasets.
-- ShuffleSplit: by specifying a fracture from the dataset and number of draws the algorithm takes validation samples and put them back into the main dataset, and then repeats the process agains as many times as specified. Same examples can appear in different validations sets.
+- **ShuffleSplit**: by specifying a fracture from the dataset and number of draws the algorithm takes validation samples and put them back into the main dataset, and then repeats the process agains as many times as specified. Same examples can appear in different validations sets.
+- **Group K-fold**: Used in datasets where multiple observations belong to the same underlying entity or group. Prevents data leakage between the training and validation sets by keeping groups in the same subset. 
 
 ### Watch for
 

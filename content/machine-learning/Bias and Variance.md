@@ -2,6 +2,9 @@
 tags:
   - statistics
   - ML
+aliases:
+  - variance
+  - bias
 ---
 Bias and variance are two fundamental sources of error in statistical modeling and [[Machine Learning Concepts|Machine Learning]] that govern how well a model generalizes to unseen data.
 

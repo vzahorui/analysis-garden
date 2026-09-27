@@ -4,4 +4,4 @@ tags:
 ---
 Example models
 
-* [[Logistic Regression]]
+* [[Logistic Regression]] (binary) -> Generalizes to [[Softmax Regression]] (multiclass). 
