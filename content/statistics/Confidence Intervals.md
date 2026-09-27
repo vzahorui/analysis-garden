@@ -1,6 +1,4 @@
 ---
 tags:
   - statistics
-aliases:
-  - PDF
 ---

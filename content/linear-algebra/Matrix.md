@@ -17,7 +17,7 @@ where each element $a_{ij}$ is a scalar belonging to the real numbers ($a_{ij} \
 
 A matrix can be viewed as a collection of [[Vector|vectors]] (either column or row vectors). 
 
-### Key Notational Aspects
+# Key Notational Aspects
 
 - **Element Indexing:** The entry in the $i$-th row and $j$-th column of matrix $\mathbf{A}$ is denoted by an italicized lower-case scalar $a_{ij}$, or using bracket notation $[\mathbf{A}]_{i,j}$.
 - **Rows and Columns as Vectors:**
@@ -26,3 +26,6 @@ A matrix can be viewed as a collection of [[Vector|vectors]] (either column or r
 - **Transposition:** Transposing a matrix flips it over its main diagonal, swapping its rows and columns. If $\mathbf{A} \in \mathbb{R}^{m \times n}$, then its transpose $\mathbf{A}^T \in \mathbb{R}^{n \times m}$, where $[\mathbf{A}^T]_{ij} = a_{ji}$.
 - **Discrete Matrix Domains:** If all entries of an $m \times n$ matrix are restricted to discrete values (e.g., binary elements), we apply the dimensions to the set:
 $$\mathbf{A} \in \{0, 1\}^{m \times n}$$
+# Other References
+
+* [[Matrix Operations]]

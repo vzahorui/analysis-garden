@@ -74,7 +74,10 @@ $$\nabla_x f(x) =  \begin{bmatrix} \partial_{x1}f(x), \partial_{x2}f(x), \dots, 
 
 Therefore, for a multivariable function it is possible to find the instantaneous rate of change with respect to each variable. 
 
-Also see [[Jacobian]] as a generalization for functions with multiple outputs.
+Also see
+* [[Jacobian]] as a generalization for functions with multiple outputs.
+* [[Differentiating Multivariate Functions Shortcuts]].
+* [[Chain Rule in Multivariate Functions]]
 
 # How Derivatives Are Used in Machine Learning
 

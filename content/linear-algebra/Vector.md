@@ -10,7 +10,8 @@ Explicitly, a vector is written as a column matrix of its [[scalar]] components:
 
 $$\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}$$
 where each individual element is a scalar belonging to the real numbers ($x_i \in \mathbb{R}$ for $i \in \{1, 2, \dots, n\}$).
-### Key Notational Aspects
+## Key Notational Aspects
+
 - **Component Indexing:** The $i$-th element of a vector $\mathbf{x}$ is denoted by an italicized subscript scalar $x_i$.
 - **Row Vectors & Transposition:** By convention, vectors are assumed to be **column vectors**. To represent a row vector, we apply the transpose operator $T$ to a column vector:
 $$\mathbf{x}^T = \begin{bmatrix} x_1 & x_2 & \dots & x_n \end{bmatrix}$$
@@ -18,9 +19,9 @@ $$\mathbf{x}^T = \begin{bmatrix} x_1 & x_2 & \dots & x_n \end{bmatrix}$$
 $$\mathbf{x} \in \{0, 1\}^n$$
 This indicates that $\mathbf{x}$ is an $n$-tuple where every component $x_i \in \{0, 1\}$.
 
+## Other References
+
+* [[Vector Operations]]
+    * [[Vector Norm]]
 
 
-![[Vector-1790404764528.webp]]
-
-
-![[Vector-1790404791850.webp]]

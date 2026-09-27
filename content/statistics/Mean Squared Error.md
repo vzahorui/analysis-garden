@@ -39,7 +39,7 @@ $$\text{MSE}(\hat{\theta}) = \text{Var}(\hat{\theta}) + \left(\text{Bias}(\hat{\
 
 Using the original formula, add and subtract $\mathbb{E}[\hat{\theta}]$ inside the square:
 $$\text{MSE}(\hat{\theta}) = \mathbb{E}\left[ \Big( (\hat{\theta} - \mathbb{E}[\hat{\theta}]) + (\mathbb{E}[\hat{\theta}] - \theta) \Big)^2 \right]$$
-Expanding the squared binomial inside the expectation:
+Expanding the squared binomial inside the [[expectation]]:
 $$\text{MSE}(\hat{\theta}) = \mathbb{E}\left[ (\hat{\theta} - \mathbb{E}[\hat{\theta}])^2 + 2(\hat{\theta} - \mathbb{E}[\hat{\theta}])(\mathbb{E}[\hat{\theta}] - \theta) + (\mathbb{E}[\hat{\theta}] - \theta)^2 \right]$$
 By the linearity of expectation, we distribute $\mathbb{E}[\cdot]$ across the three terms:
 $$\text{MSE}(\hat{\theta}) = \mathbb{E}\left[(\hat{\theta} - \mathbb{E}[\hat{\theta}])^2\right] + 2\mathbb{E}\left[(\hat{\theta} - \mathbb{E}[\hat{\theta}])(\mathbb{E}[\hat{\theta}] - \theta)\right] + \mathbb{E}\left[(\mathbb{E}[\hat{\theta}] - \theta)^2\right]$$
@@ -64,7 +64,45 @@ $$\mathbb{E}\left[(\mathbb{E}[\hat{\theta}] - \theta)^2\right] = (\mathbb{E}[\ha
 
 - **Sensitivity to Outliers:** Because [[Residual vs Error|residual]] terms $(y_i - \hat{y}_i)$ are squared, large deviations carry disproportionately high weights relative to small deviations.
 - **Scale Dependency:** Units of MSE are the square of the original target variable units. Taking the square root yields the **Root Mean Squared Error (RMSE)**, returning [[Loss vs Metric|metrics]] to the original unit scale.
-- **Maximum Likelihood Equivalence:** Minimizing MSE under [[Least Squares#Ordinary Least Squares (OLS)]] is equivalent to [[Maximum Likelihood Estimation]] (MLE) under the assumption that residuals are normally and independently distributed:
+- **Maximum Likelihood Equivalence:** Minimizing MSE under [[Least Squares#Ordinary Least Squares (OLS)]] is equivalent to [[Maximum Likelihood Estimation]] (MLE) under the assumption that residuals are [[Normal Distribution|normally]] and independently distributed:
 $$\varepsilon_i = y_i - \hat{y}_i \sim \mathcal{N}(0, \sigma^2)$$
 
 It quantifies the variance and squared bias of an estimator, providing a single non-negative metric for estimation quality.
+
+# Why MSE is MLE under Normally and Independetly Distributed Residuals
+
+The [[Probability Distributions#Continuous Probability Distributions|probability density function]] (PDF) for a single observation $y_i$ in a [[Linear Models|linear model]] is:
+
+$$f(y_i \mid \mathbf{x}_i, \boldsymbol{\beta}, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2}{2\sigma^2} \right)$$
+Because the observations are independent, the joint probability (the **Likelihood function**) of observing all $n$ data points is the product of their individual probabilities:
+
+$$L(\boldsymbol{\beta}, \sigma^2 \mid \mathbf{y}, \mathbf{X}) = \prod_{i=1}^{n} f(y_i \mid \mathbf{x}_i, \boldsymbol{\beta}, \sigma^2)$$
+$$L(\boldsymbol{\beta}, \sigma^2 \mid \mathbf{y}, \mathbf{X}) = \prod_{i=1}^{n} \left[ \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2}{2\sigma^2} \right) \right]$$
+
+Maximizing the likelihood $L(\boldsymbol{\beta}, \sigma^2)$ is mathematically equivalent to maximizing its natural logarithm, $\ell(\boldsymbol{\beta}, \sigma^2) = \ln L(\boldsymbol{\beta}, \sigma^2)$:
+
+$$\ell(\boldsymbol{\beta}, \sigma^2) = \ln \left[ \left(2\pi\sigma^2\right)^{-n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2 \right) \right]$$
+
+Applying logarithm properties ($\ln(ab) = \ln(a) + \ln(b)$ and $\ln(e^x) = x$):
+
+$$\ell(\boldsymbol{\beta}, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln(\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2$$
+## Maximizing Likelihood with Respected to a Parameter
+
+When estimating the parameters $\boldsymbol{\beta}$, we hold the variance $\sigma^2$ constant. Look at how each term in the log-likelihood relies on $\boldsymbol{\beta}$:
+
+- $-\frac{n}{2}\ln(2\pi)$ is a constant with respect to $\boldsymbol{\beta}$.
+- $-\frac{n}{2}\ln(\sigma^2)$ is a constant with respect to $\boldsymbol{\beta}$.
+- $-\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2$ is the **only term containing $\boldsymbol{\beta}$**.
+
+Therefore, maximizing $\ell(\boldsymbol{\beta}, \sigma^2)$ reduces to maximizing:
+
+$$\arg\max_{\boldsymbol{\beta}} \ell(\boldsymbol{\beta}, \sigma^2) = \arg\max_{\boldsymbol{\beta}} \left( -\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2 \right)$$
+
+Since $\frac{1}{2\sigma^2}$ is a positive scalar constant, maximizing a negative quantity is strictly equivalent to **minimizing** the positive summation term:
+
+$$\arg\max_{\boldsymbol{\beta}} \ell(\boldsymbol{\beta}, \sigma^2) = \arg\min_{\boldsymbol{\beta}} \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2$$
+The term being minimized above is the **Sum of Squared Errors (SSE)**:
+
+$$\text{SSE}(\boldsymbol{\beta}) = \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2$$
+Since dividing by a positive constant $n$ does not change the position of the minimum:
+$$\arg\min_{\boldsymbol{\beta}} \text{SSE}(\boldsymbol{\beta}) \iff \arg\min_{\boldsymbol{\beta}} \frac{1}{n}\sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \boldsymbol{\beta})^2 = \arg\min_{\boldsymbol{\beta}} \text{MSE}(\boldsymbol{\beta})$$

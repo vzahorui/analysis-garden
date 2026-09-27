@@ -8,7 +8,7 @@ Mean Integrated Squared Error (MISE) is a metric used to measure the global perf
 
 # Formula
 
-Given an unknown true [[Probability Density Function]] $f(x)$ and an estimate $\hat{f}(x)$, MISE measures the expected total squared distance between the two curves:
+Given an unknown true [[Probability Distributions#Continuous Probability Distributions|Probability Density Function]] $f(x)$ and an estimate $\hat{f}(x)$, MISE measures the expected total squared distance between the two curves:
 
 $$\text{MISE}(\hat{f}) = \mathbb{E} \left[ \int \big(\hat{f}(x) - f(x)\big)^2 dx \right]$$
 # Why not just MSE?

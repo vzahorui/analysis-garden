@@ -18,6 +18,8 @@ $$\mathbf{J} = \begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partia
 - **Rows ($m$):** Correspond to each output component $f_i$.
 - **Columns ($n$):** Correspond to partial derivatives with respect to each input variable $x_j$.
 
+Element $(i, j)$ in the matrix tells you: _"How fast does the $i$-th output change when I nudge the $j$-th input?_
+
 Using the Jacobian, a local change in output $\Delta \mathbf{f}$ due to a small change in input $\Delta \mathbf{x}$ is approximated via matrix multiplication:
 
 $$\Delta \mathbf{f} \approx \mathbf{J} \Delta \mathbf{x}$$
