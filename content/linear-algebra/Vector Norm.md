@@ -22,7 +22,7 @@ To be considered a valid norm, a function $\Vert{}\mathbf{x}\Vert{}$ must satisf
 
 ## Common Vector Norms
 
-### $L_1$ Norm (Manhattan / Taxicab Norm)
+### L1 Norm (Manhattan / Taxicab Norm)
 
 Sum of the absolute values of the vector components.
 
@@ -33,7 +33,7 @@ $$\Vert{}\mathbf{x}\Vert{}_1 = \sum_{i=1}^{n} \vert{}x_i\vert{} = \vert{}x_1\ver
     - $L_1$ [[regularization]] (Lasso) promotes sparsity by driving uninformative feature weights strictly to zero.
     - [[Mean Absolute Error]] loss function.
 
-### 2. $L_2$ Norm (Euclidean Norm)
+### L2 Norm (Euclidean Norm)
 
 The standard straight-line distance from the origin to the vector endpoint.
 
@@ -44,7 +44,7 @@ $$\Vert{}\mathbf{x}\Vert{}_2 = \sqrt{\sum_{i=1}^{n} x_i^2} = \sqrt{x_1^2 + x_2^2
     - $L_2$ regularization (Ridge) penalizes large weights evenly across features without forcing them to exact zeros.
     - [[Mean Squared Error]] loss function.
 
-### 3. $L_\infty$ Norm (Max / Chebyshev Norm)
+### L-Infinity Norm (Max / Chebyshev Norm)
 
 The maximum absolute value among all components in the vector.
 
@@ -52,7 +52,7 @@ $$\Vert{}\mathbf{x}\Vert{}_\infty = \max_{1 \le i \le n} \vert{}x_i\vert{}$$
 
 - **Intuition:** The largest single dimension displacement.
 
-### 4. General $L_p$ Norm
+### General Norm
 
 The generalized family of norms for any real number $p \ge 1$:
 

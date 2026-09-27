@@ -24,8 +24,8 @@ Extracts mathematical rules from data which generalize well to new observations.
 
 Applies in supervised learning. 
 
-* **Regression**: predicting a continuous numerical quantity.
-* **Classification**: predicting a discrete label (class).
+* [[Regression]]: predicting a continuous numerical quantity.
+* [[Classification]]: predicting a discrete label (class).
 
 
 
