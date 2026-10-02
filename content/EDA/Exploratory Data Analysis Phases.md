@@ -6,9 +6,7 @@ aliases:
   - EDA
   - Exploratory Data Analysis
 ---
-This should be the first step in data analysis after the data is clean enough and pre-processed.
-* no duplicates
-* NULL values are understood.
+Run after [[Data Audit]] has cleared readiness. In [[Machine Learning Concepts|Machine Learning]] this is done only after splitting into [[Train and Test]] explore train data only.
 
 # Phase 1: Univariate analysis
 

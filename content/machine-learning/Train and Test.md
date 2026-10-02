@@ -2,9 +2,9 @@
 tags:
   - ML
 ---
-In machine learning, the ultimate goal is to build a model that **generalizes well to unseen data**—meaning it performs accurately on new data, not just the data it learned from.
+In machine learning, the ultimate goal is to build a model that **generalizes well to unseen data**: meaning it performs accurately on new data, not just the data it learned from.
 
-To achieve this and prevent **overfitting** (where a model simply memorizes the training data), data is split into distinct sets.
+Split and cross-validation mechanics implement the labeled side of [[Validation Strategy]]. To prevent **overfitting** (where a model simply memorizes the training data), data is split into distinct sets.
 
 ## Train vs Test Sets
 
@@ -35,13 +35,13 @@ A single train/validation split has a flaw: **it relies on a single random cut**
 ### K-Fold Cross-Validation
 
 The most common technique is **$K$-Fold Cross-Validation**:
-1. Split the training data into $K$ equal-sized subsets (folds)—commonly $K=5$ or $K=10$.
+1. Split the training data into $K$ equal-sized subsets (folds), commonly $K=5$ or $K=10$.
 2. Train the model $K$ times.
 3. In each iteration, use $K-1$ folds for training and the remaining $1$ fold for validation.
 4. Calculate the average score across all $K$ iterations to get a stable performance metric.
 ### Common Types of Cross-Validation
 
-- **Stratified $K$-Fold:** Ensures class distribution (e.g., 80% class A, 20% class B) is identical in every fold—essential for imbalanced datasets.
+- **Stratified $K$-Fold:** Ensures class distribution (e.g., 80% class A, 20% class B) is identical in every fold: essential for imbalanced datasets.
 - **Time-Series Split:** Respects chronological order so future data is never used to predict past data.
 - **Leave-One-Out (LOOCV):** Uses $K = N$ (where $N$ is total sample size). High computational cost, but useful for tiny datasets.
 - **ShuffleSplit**: by specifying a fracture from the dataset and number of draws the algorithm takes validation samples and put them back into the main dataset, and then repeats the process agains as many times as specified. Same examples can appear in different validations sets.

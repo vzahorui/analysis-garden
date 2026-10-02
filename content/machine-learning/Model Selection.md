@@ -2,7 +2,10 @@
 tags:
   - ML
 ---
-Model selection is the process of choosing the optimal machine learning algorithm and configuration (hyperparameters) for a given dataset and problem statement. It aims to find a model that minimizes generalization error on unseen data by navigating the [[Bias and Variance]]. 
+Model selection is the process of choosing the optimal machine learning algorithm and configuration (hyperparameters) for a given dataset and problem statement. It aims to find a model that minimizes generalization error on unseen data by navigating the [[Bias and Variance]].
+
+Runs after [[Validation Strategy]] and [[Choice of a Scoring Metric]] are set: this note executes that evaluation plan.
+
 ## The Core Objective: Generalization
 
 Every model selection decision trades off capacity against stability. Refer to [[Bias and Variance#Managing the Bias-Variance Tradeoff]] for the statistical mechanics.
