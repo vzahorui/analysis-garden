@@ -1,6 +1,7 @@
 ---
 tags:
   - ML/classification
+  - ML/deep-learning
 ---
 The softmax function converts a vector of raw, unnormalized real numbers (called **logits**) into a valid [[Probability Distributions|Probability Distribution]]. 
 

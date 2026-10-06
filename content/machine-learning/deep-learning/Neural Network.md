@@ -5,6 +5,7 @@ aliases:
   - Neural Net
   - Neural Networks
   - NN
+  - neuron
 ---
 A **neural network** maps inputs to outputs through layers of interconnected neurons. Inspired by biological brains, it is the building block behind [[Deep Learning Concepts|Deep Learning]] when those layers stack deep.
 
@@ -26,7 +27,7 @@ Each neuron does two steps:
 
 $$z = \sum_{i=1}^{n} w_i x_i + b$$
 
-2. **Nonlinear activation** $a = \sigma(z)$. Common choices live in their own notes: [[ReLU]], [[Sigmoid Function|Sigmoid]], [[Softmax Function|Softmax]] (typical multi-class **output**), GELU, and others.
+2. **Nonlinear [[Activation Functions]]** $a = \sigma(z)$. Common choices live in their own notes: [[ReLU]], [[Sigmoid Function|Sigmoid]], [[Softmax Function|Softmax]] (typical multi-class **output**), GELU, and others.
 
 # Why Nonlinearity
 
@@ -91,3 +92,4 @@ Optimizer variants, learning-rate behavior, and batch choices stay in [[Gradient
 # See Also 
 
 * [[Activation Functions]]
+* [[Backpropagation]]

@@ -20,7 +20,7 @@ where $\lambda \ge 0$ is the regularization strength hyperparameter, and $\Omega
 - **Key Characteristic:** Acts as built-in **feature selection**, yielding sparse models.
 - **Best Used When:** You have high-dimensional data with many redundant or irrelevant features.
 
-### L2 Regularization (Ridge / Weight Decay)
+### L2 Regularization (Ridge)
 
 - **Penalty:** Sum of squared weights: $\Omega(\mathbf{w}) = \Vert{}\mathbf{w}\Vert{}_2^2 = \sum w_i^2$
 - **Behavior:** Shrinks weights evenly toward zero without setting them strictly to zero.
