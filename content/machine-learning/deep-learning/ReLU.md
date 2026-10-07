@@ -25,6 +25,26 @@ _(At $x=0$, the subderivative is typically set to 0 or 0.5 in deep learning fram
 
 * **The "Dying ReLU" Problem):** If a large gradient update causes a neuron's weights to adjust such that $W \cdot x + b < 0$ for all training samples, the neuron outputs $0$ and receives a gradient of $0$. It becomes permanently inactive ("dead") and stops updating forever.
 
+## ReLU6
+
+**ReLU6** is a variation of the standard **ReLU (Rectified Linear Unit)** activation function that caps (saturates) the output at **6**.
+
+### Mathematical Definition
+
+$$f(x) = \min(\max(0, x), 6)$$
+
+In piecewise form:
+
+$$f(x) = \begin{cases} 0 & \text{for } x < 0 \\ x & \text{for } 0 \le x \le 6 \\ 6 & \text{for } x > 6 \end{cases}$$
+
+### Why Cap at 6?
+
+ReLU6 was introduced by Google in the **MobileNet** paper to make neural networks more efficient and robust when deployed on low-precision hardware (such as mobile devices, embedded chips, or fixed-point DSPs using 8-bit quantization):
+
+- **Prevents Overflow in Fixed-Point Arithmetic:** Standard ReLU can output arbitrarily large numbers ($x \to \infty$). In fixed-point representations (e.g., INT8 or FP16), large dynamic ranges waste precious bit precision on huge values, or cause upper-range overflow/clipping errors.
+- **Encourages Sparse Feature Learning:** Forcing high activations to saturate at 6 encourages the model to learn sparse, bounded representations early during training rather than relying on unbounded activation magnitudes.
+- **Why the Number 6 Specifically?** Using $6 = 2^2 + 2^1$ fits neatly into low-bit representation ranges (specifically $Q_{3.5}$ fixed-point numbers with 3 integer bits and 5 fractional bits, where the maximum expressible integer is 7). It provides enough dynamic range for non-linear feature representation without wasting bits.
+
 # Leaky ReLU
 
 Leaky ReLU directly targets the **Dying ReLU** problem. By adding a tiny, fixed positive slope to the negative region ($x < 0$), it guarantees that every neuron retains a non-zero gradient, keeping dead units recoverable during optimization.

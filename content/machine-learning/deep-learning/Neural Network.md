@@ -93,3 +93,4 @@ Optimizer variants, learning-rate behavior, and batch choices stay in [[Gradient
 
 * [[Activation Functions]]
 * [[Backpropagation]]
+* [[Network Initialization]]

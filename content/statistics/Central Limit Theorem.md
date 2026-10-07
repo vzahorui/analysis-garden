@@ -26,5 +26,5 @@ $$Z = \frac{\bar{X}_n - \mu}{\sigma / \sqrt{n}} \xrightarrow{d} \mathcal{N}(0, 1
 The CLT is the foundational pillar of parametric inferential statistics. Because sample means follow a predictable normal distribution:
 
 1. **[[AB Testing]] & Experiments:** You can perform $z$-tests or $t$-tests to compare two groups without knowing the exact distribution of individual user actions.
-2. **[[Confidence Intervals]]:** You can construct margin-of-error bounds around a sample mean using standard normal critical values ($z$-scores).
+2. **[[Confidence Interval]]:** You can construct margin-of-error bounds around a sample mean using standard normal critical values ($z$-scores).
 3. **Opinion Polling:** A survey of 1,000 voters accurately estimates national sentiment because the distribution of sample proportions is approximately normal

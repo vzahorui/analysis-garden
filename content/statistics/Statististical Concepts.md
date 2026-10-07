@@ -26,3 +26,9 @@ At its core, **statistics** is the science of learning from data through mathema
 * [[Machine Learning vs Statistics]]
 * [[Set Theory]] -> [[Multiple Random Variables]]
 
+# Main Areas
+
+* [[Hypothesis Testing]]
+
+
+

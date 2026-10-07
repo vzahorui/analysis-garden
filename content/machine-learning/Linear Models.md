@@ -50,7 +50,7 @@ For a linear model to produce reliable and statistically sound results, four mai
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | **High Interpretability:** Coefficients directly show the exact impact of each input.                       | **Over-simplification:** Cannot capture complex, non-linear patterns (e.g., exponential growth) without feature engineering. |
 | **Computationally Efficient:** Trains instantly even on massive datasets.                                   | **Sensitivity to Outliers:** Extreme data points can heavily skew the fitted line.                                           |
-| **Clear Statistical Inference:** Provides [[confidence intervals]] and p-values for [[hypothesis testing]]. | **Multicollinearity Risks:** Highly correlated inputs can cause unstable coefficient estimates.                              |
+| **Clear Statistical Inference:** Provides [[Confidence Interval]] and p-values for [[hypothesis testing]]. | **Multicollinearity Risks:** Highly correlated inputs can cause unstable coefficient estimates.                              |
 # Prominent examples
 
 * [[Linear Regression]]
