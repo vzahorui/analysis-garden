@@ -13,11 +13,21 @@ Related: [[p-value]], [[Confidence Interval]], [[Effect Size]], [[Statistical Po
 
 ---
 
-## Core components
+## Core Concepts
 
-- [[Null Hypothesis]] — H0H0​
+### 1. Key Terminology & Definitions
+
+- **Null Hypothesis ($H_0$):** The default assumption that there is no effect, no difference, or no relationship between variables. It serves as the baseline model ($H_0: \theta = \theta_0$).
+- **Alternative Hypothesis ($H_1$ or $H_a$):** The competing claim that an effect, difference, or relationship exists ($H_a: \theta \neq \theta_0$, $H_a: \theta > \theta_0$, or $H_a: \theta < \theta_0$).
+- **Test Statistic:** A standardized numerical summary calculated from sample data that measures how far the sample deviates from what would be expected under $H_0$.
+- **Null Distribution:** The theoretical [[sampling distribution]] of the test statistic under the assumption that $H_0$ is true.
+- **p-value:** The probability, assuming $H_0$ is true, of obtaining a test statistic at least as extreme as the one observed in the sample data:
     
-- [[Alternative Hypothesis]] — H1H1​ or HaHa​
+    $$p\text{-value} = P(\vert{}T\vert{} \ge \vert{}t_0\vert{} \mid H_0)$$
+    
+- **Significance Level ($\alpha$):** The pre-specified threshold for the p-value below which $H_0$ is rejected (commonly $\alpha = 0.05$ or $0.01$).
+    
+- **Critical Value ($c$):** The boundary point on the test statistic's distribution corresponding to $\alpha$ that defines the rejection region.​
     
 - [[Test Statistic]]
     
