@@ -1,6 +1,8 @@
 ---
 tags:
   - statistics
+aliases:
+  - standard error
 ---
 Up: [[Hypothesis Testing]]. 
 
@@ -8,7 +10,7 @@ A **sampling distribution** is the [[Probability Distributions|probability distr
 
 Instead of describing the individual values in a population, a sampling distribution describes how a calculated statistic varies across repeated samples.
 
-### The Intuition: A Thought Experiment
+## The Intuition: A Thought Experiment
 
 Imagine you want to know the average height of all adults in a city (the population mean, $\mu$).
 
@@ -49,7 +51,7 @@ $$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)$$
 | [[Confidence Interval]]   | Provides the standard error needed to construct margin-of-error bounds around point estimates (e.g., $\bar{X} \pm z \cdot \frac{\sigma}{\sqrt{n}}$). |
 | **Inference Reliability** | Quantifies uncertainty so decisions are made using probabilistic rigor rather than single-sample guesswork.                                          |
 
-## Sampling Distribution vs Population vs.Sample
+## Sampling Distribution vs Population vs Sample
 
 |**Feature**|**Population Distribution**|**Sample Distribution**|**Sampling Distribution**|
 |---|---|---|---|
@@ -58,7 +60,7 @@ $$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)$$
 |**Mean symbol**|$\mu$|$\bar{x}$|$\mu_{\bar{X}}$|
 |**Standard deviation symbol**|$\sigma$|$s$|$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$ (Standard Error)|
 
-## Why Standard Error Divides by $\sqrt{n}$
+## Why Standard Error Divides by the Square Root of n?
 
 The standard error of the mean ($SE$) measures how much sample means ($\bar{X}$) vary from sample to sample around the true population mean ($\mu$).
 
@@ -85,3 +87,29 @@ $$\text{Var}(\bar{X}) = \frac{1}{n^2} \left( \underbrace{\sigma^2 + \sigma^2 + \
 Standard deviation is the square root of variance. Taking the square root of $\text{Var}(\bar{X})$ gives the standard error ($\sigma_{\bar{X}}$):
 
 $$\sigma_{\bar{X}} = \sqrt{\text{Var}(\bar{X})} = \sqrt{\frac{\sigma^2}{n}} = \frac{\sigma}{\sqrt{n}}$$
+## Using Sample Standard Deviation s and Bessel's Correction (n-1)
+
+In practice, the true population standard deviation $\sigma$ is almost always unknown. The sample standard deviation $s$ is substituted in its place to estimate the standard error:
+
+$$SE = \frac{s}{\sqrt{n}}$$
+
+Because $s$ itself is an estimate subject to sample variability, the resulting standardized test statistic follows a [[Student's t-Distribution]] with $n - 1$ [[degrees of freedom]] rather than a standard [[Normal Distribution|Normal]] $Z$-distribution (though as $n$ grows large, $t$ converges to $Z$).
+### Why divide by $n - 1$? (Bessel's Correction)
+
+When calculating $s$, divide by $n - 1$ rather than $n$:
+
+$$s = \sqrt{\frac{\sum_{i=1}^n (X_i - \bar{X})^2}{n - 1}}$$
+
+There are two main reasons for using $n - 1$:
+
+1. **Correcting Downward Bias:**
+    
+    Because $\bar{X}$ shifts slightly toward the sample data points compared to where $\mu$ actually lies, calculating $\sum (X_i - \bar{X})^2$ slightly _underestimates_ the true spread around $\mu$. Dividing by $n - 1$ inflates the variance estimate slightly to make $s^2$ an **unbiased estimator** of $\sigma^2$ (meaning $E[s^2] = \sigma^2$).
+    
+1. [[Degrees of Freedom]]:
+    
+    To calculate $s$, $\bar{X}$ must first be calculated. The sample mean places a constraint on the data points because their deviations from $\bar{X}$ must sum to zero:
+    
+    $$\sum_{i=1}^n (X_i - \bar{X}) = 0$$
+    
+    Once $n - 1$ deviations are known, the $n$-th deviation is fixed and cannot vary freely. Thus, only $n - 1$ independent pieces of information remain to estimate variability.
