@@ -50,3 +50,11 @@ Where:
 |**Confidence Level**|$90\% \rightarrow 95\% \rightarrow 99\%$|**Wider**|Being more certain requires casting a wider net.|
 |**Sample Size ($n$)**|Increases|**Narrower**|Larger samples reduce standard error ($\propto 1/\sqrt{n}$).|
 |**Data Variance ($\sigma^2$)**|Increases|**Wider**|Higher noise/spread increases uncertainty.|
+
+## Intervals for a Binomial Proportion
+
+For a success rate $\hat{p} = x/n$ (accuracy, conversion rate, etc.), common constructions are:
+
+- [[Wald Interval]]: normal approximation centered at $\hat{p}$
+- [[Wilson Score Interval]]: score-test inversion; preferred near $0$ / $1$
+- [[Clopper-Pearson Interval]]: exact binomial (Beta quantile) inversion

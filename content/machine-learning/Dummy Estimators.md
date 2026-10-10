@@ -13,4 +13,4 @@ Common strategies (sklearn-style):
 * **Regression:** `mean`, `median`, `quantile`, or a constant.
 * **Classification:** `most_frequent`, `stratified`, `uniform`, or a constant label.
 
-Keep the dummy in the comparison set through screening: it anchors how much real models are actually buying you.
+Keep the dummy in the comparison set through screening: it anchors how much real models are actually buying you (see [[Model Selection#Comparing Many Models|Model Selection]]).

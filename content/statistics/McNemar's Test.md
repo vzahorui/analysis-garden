@@ -49,3 +49,5 @@ Suppose you train two [[Computer Vision Concepts|Computer Vision]] classifiers o
 $$\chi^2 = \frac{(40 - 10)^2}{40 + 10} = \frac{30^2}{50} = \frac{900}{50} = 18.0$$
 
 3. **P-value assessment:** For $\text{df} = 1$, a $\chi^2$ score of $18.0$ yields $p < 0.0001$. We reject $H_0$ and conclude Model A significantly outperforms Model B.
+
+When several classifiers are screened together, place McNemar as the pairwise post hoc after [[Cochran’s Q Test]], with multiplicity control: see [[Model Selection#Comparing Many Models|Model Selection]].

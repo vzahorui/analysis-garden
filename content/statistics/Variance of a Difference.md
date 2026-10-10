@@ -35,15 +35,7 @@ Where:
 
 ### [[Hypothesis Testing]] & Experimental Design
 
-- **Paired $t$-Tests:** When comparing "before" and "after" measurements on the same subjects, $X$ and $Y$ are positively correlated. Exploiting $\text{Cov}(X,Y) > 0$ drastically reduces $\text{Var}(X - Y)$, giving you much higher statistical power to detect subtle real differences compared to an unpaired test.
+- **Paired [[T-test|t-tests]]:** When comparing "before" and "after" measurements on the same subjects, $X$ and $Y$ are positively correlated. Exploiting $\text{Cov}(X,Y) > 0$ drastically reduces $\text{Var}(X - Y)$, giving you much higher statistical power to detect subtle real differences compared to an unpaired test.
 - [[AB Testing]] (unpaired, independent groups comparison): In online experiments or clinical trials, calculating the standard error of the difference between treatment ($\bar{X}_T$) and control ($\bar{X}_C$) groups relies on: 
 
 $$\text{Var}(\bar{X}_T - \bar{X}_C) = \frac{\sigma_T^2}{n_T} + \frac{\sigma_C^2}{n_C}$$
-
-### Model Evaluation & Benchmark Comparisons
-
-In model evaluation, the [[covariance]] is measured between the performance [[Objectives & Metrics|metrics]] (or prediction errors) of the two models across the exact same evaluation samples or test [[Train and Test#K-Fold Cross-Validation]] folds.
-
-Instead of measuring how Model A's output relates to Model B's output on a single data point, you measure how both models **co-vary in their success or failure** across identical validation splits or subsets of data.
-
-

@@ -95,7 +95,7 @@ See also: [[Power Analysis]].
 - [[Z-Test]]: Used for population means or proportions when sample size is large or population variance ($\sigma^2$) is known.
 - [[T-test]]:  Used for small sample sizes with unknown population variance (One-sample, Two-sample independent, Paired).
 - [[Chi-Square Test]]: Used for categorical data (Goodness-of-fit, Independence, Homogeneity).
-- [[McNemar Test]]: for testing the difference in paired binary nominal outcomes.
+- [[McNemar's Test]]: for testing the difference in paired binary nominal outcomes.
 - [[ANOVA]]: Analysis of Variance; extends the t-test to compare means across three or more groups.
 - Non-Parametric Tests: Distribution-free alternatives (e.g., [[Mann-Whitney U Test|Mann-Whitney U]], Wilcoxon Signed-Rank, Kruskal-Wallis) when normality assumptions fail.
 

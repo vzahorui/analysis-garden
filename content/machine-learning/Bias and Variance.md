@@ -18,7 +18,7 @@ In terms of [[Mean Squared Error]], bias and Variance are its two components. Se
 ### Consequence to Interpretation
 
 - **Variance** measures how much the estimate $\hat{\theta}$ fluctuates around its average location across different samples (spread/precision).
-- **Bias** measures how far the average estimate $\mathbb{E}[\hat{\theta}]$ falls from the true value $\theta$ (systematic offset/accuracy).
+- **Bias** measures how far the average estimate $\mathbb{E}[\hat{\theta}]$ falls from the true value $\theta$ (systematic baoffset/accuracy).
 # Managing the Bias-Variance Tradeoff
 
 Below is an example showing the validation curve for polynomial model with increasing complexity. 
@@ -46,5 +46,5 @@ Another way to reduce Variance is the obtain more data to train on.
  
 Increasing of the train error is cause by more variability between new data points. 
 
-Eventually the test error plateaus and the model reaches the point of Bayes error rate (irreducible noise). This is the point where adding more date is no longer beneficial to the model performance but instead increases the costs. 
+Eventually the test error plateaus. That floor is the **Bayes error rate**: the lowest achievable error for the problem given the features and label noise (also called irreducible error). No model can beat it on average; adding more data of the same kind no longer helps performance and only raises cost. 
 
