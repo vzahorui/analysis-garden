@@ -1,6 +1,9 @@
 ---
 tags:
   - ML/deep-learning
+aliases:
+  - exploding gradient
+  - vanishing gradient
 ---
 The **exploding [[Derivative|gradient]] problem** occurs during the training of deep [[Neural Network|Neural Networks]] when gradients during backpropagation grow exponentially large as they flow backward through layers.
 
@@ -40,7 +43,7 @@ $$\text{if } \Vert{}\mathbf{g}\Vert{} > c, \quad \mathbf{g} \leftarrow c \cdot \
 
 - **Gated Architectures ([[LSTM]] / GRU):** Use additive memory gates instead of pure multiplicative recurrent paths, keeping gradients stable over long time horizons.
 
-- **Residual Connections ([[ResNets]]):** Provide direct "skip connections" for gradients to flow backward linearly ($\frac{\partial}{\partial x}(x + f(x)) = 1 + f'(x)$), avoiding repeated matrix contractions.
+- **Residual Connections ([[ResNet]]):** Provide direct "skip connections" for gradients to flow backward linearly ($\frac{\partial}{\partial x}(x + f(x)) = 1 + f'(x)$), avoiding repeated matrix contractions.
 
 #### Normalization Layers
 

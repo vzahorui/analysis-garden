@@ -34,4 +34,4 @@ The primary downside of Mish is its computational complexity. Calculating $e^x$,
 ### Where Each Functions Best
 
 - [[Transformer]]s & [[LLM]]s: Prefer [[GELU]] and [[SiLU]]/[[Gated Linear Units#SwiGLU The Modern LLM Standard|SwiGLU]] due to their efficient hardware implementation and established performance at massive parameter scale.
-- [[Computer Vision Concepts|Computer Vision]] & [[Convolutional Neural Network|CNN]]s: **Mish** frequently outperforms [[ReLU]] and [[SiLU|Swish]] in deep convolutional networks (such as YOLOv4 backbones and [[ResNets]]) where smooth gradients across many residual layers improve generalization accuracy.
+- [[Computer Vision Concepts|Computer Vision]] & [[Convolutional Neural Network|CNN]]s: **Mish** frequently outperforms [[ReLU]] and [[SiLU|Swish]] in deep convolutional networks (such as YOLOv4 backbones and [[ResNet]]) where smooth gradients across many residual layers improve generalization accuracy.

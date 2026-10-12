@@ -10,7 +10,7 @@ It resolved the training instability and vanishing signal issues that occurred w
 
 ### The Underlying Problem It Solves
 
-When initializing weights in a neural network, the main goal is to prevent the variance of activation signals from exploding or shrinking as signals flow forward through layers, and to prevent [[Exploding Gradients]] and [[Saturation and Vanishing Gradient|Vanishing Gradients]] during [[Backpropagation]].
+When initializing weights in a neural network, the main goal is to prevent the variance of activation signals from exploding or shrinking as signals flow forward through layers, and to prevent [[Exploding and Vanishing Gradients]] and [[Saturation and Vanishing Gradient|Vanishing Gradients]] during [[Backpropagation]].
 
 #### Why Xavier Fails with ReLU
 

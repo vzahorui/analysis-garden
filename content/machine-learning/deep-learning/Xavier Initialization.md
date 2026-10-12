@@ -12,7 +12,7 @@ It solves the signal exploding/vanishing problem in networks with symmetric acti
 
 If weights are initialized too large or too small:
 
-- **Weights too large:** The variance of activations grows exponentially with network depth, pushing activations into the saturated regions of activation functions (where slopes are nearly zero) and causing [[exploding gradients]] or [[Saturation and Vanishing Gradient|vanishing gradients]].
+- **Weights too large:** The variance of activations grows exponentially with network depth, pushing activations into the saturated regions of activation functions (where slopes are nearly zero) and causing [[Exploding and Vanishing Gradients]] or [[Saturation and Vanishing Gradient|vanishing gradients]].
 - **Weights too small:** Activations shrink toward zero layer by layer, leading to **vanishing signals** where deeper layers receive almost no meaningful gradient updates.
 
 ### Mathematical Derivation

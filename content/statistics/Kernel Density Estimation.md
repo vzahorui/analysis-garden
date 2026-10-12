@@ -5,7 +5,7 @@ aliases:
   - Kernel Density Estimator
   - KDE
 ---
-**Kernel Density Estimation (KDE)** is a non-parametric way to estimate the probability density function (PDF) of a continuous random variable.
+**Kernel Density Estimation (KDE)** is a non-parametric way to estimate the probability density function (PDF) of a continuous [[Set Theory#Random Variable|random variable]].
 
 ## The Intuition: How KDE Works
 

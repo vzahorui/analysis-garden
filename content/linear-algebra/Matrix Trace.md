@@ -1,8 +1,10 @@
 ---
 tags:
   - linear-algebra
+aliases:
+  - trace
 ---
-The **trace of a square matrix**—defined as the sum of its diagonal elements ($\text{Tr}(A) = \sum_{i=1}^n a_{ii}$)—is one of the most fundamental operations in linear algebra. Despite its simple definition, it acts as a bridge connecting linear transformations, geometry, statistics, and physical systems.
+The **trace of a square matrix**—defined as the sum of its diagonal elements ($\text{Tr}(A) = \sum_{i=1}^n a_{ii}$)—is one of the most fundamental operations in [[Linear Algebra Concepts|Linear Algebra]]. Despite its simple definition, it acts as a bridge connecting linear transformations, geometry, statistics, and physical systems.
 
 ## Key Mathematical Properties
 
@@ -26,7 +28,7 @@ $$\text{Tr}(A) = \sum_{i=1}^n \lambda_i$$
 
 ### Geometry & Vector Spaces
 
-- **Matrix Inner Product (Frobenius Inner Product):**
+- **Matrix Inner Product ([[Frobenius Inner Product]]):**
 The standard inner product on the space of matrices is defined using the trace:
 $$\langle A, B \rangle = \text{Tr}(A^\top B)$$
 - Calculation of [[Frobenius Norm]].
@@ -34,4 +36,4 @@ $$\langle A, B \rangle = \text{Tr}(A^\top B)$$
 ### [[Statististical Concepts|Statistics]] & [[Machine Learning Concepts|Machine Learning]]
 
 - **Total Variance:** If $\Sigma$ is a covariance matrix, $\text{Tr}(\Sigma)$ equals the sum of the variances of all individual variables (the total variance of the dataset).
-- **Derivatives of Matrix Expressions:** The trace trick is heavily used in multivariate statistics and  [[Deep Learning Concepts|Deep Learning]] backpropagation to compute [[Derivative|derivatives]] of scalar functions involving matrices (e.g., $\nabla_X \text{Tr}(AXB)$).
+- **Derivatives of Matrix Expressions:** The trace trick is heavily used in multivariate statistics and  [[Deep Learning Concepts|Deep Learning]] [[Backpropagation]] to compute [[Derivative|derivatives]] of scalar functions involving matrices (e.g., $\nabla_X \text{Tr}(AXB)$).

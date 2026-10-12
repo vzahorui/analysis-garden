@@ -1,6 +1,9 @@
 ---
 tags:
   - ML
+aliases:
+  - regularizer
+  - regularize
 ---
 **Regularization** is a set of techniques used in [[Machine Learning Concepts|Machine Learning]] to prevent **overfitting** by penalizing complex models.
 

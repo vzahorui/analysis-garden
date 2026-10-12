@@ -10,8 +10,8 @@ Proper initialization ensures that signal strength (variance of activations and 
 
 If weights are initialized poorly, neural networks fail to learn due to two primary mathematical failure modes:
 
-- [[Exploding Gradients]]: If weights are initialized too large, activations and gradients grow exponentially layer by layer, leading to numerical overflow (`NaN` values) or unstable updates.
-- **Vanishing Gradients:** If weights are initialized too small, activation values and gradients exponentially shrink toward zero as they pass through layers. Deep layers stop updating, and the network fails to train. In principle, this is the same problem as [[Exploding Gradients]].
+- [[Exploding and Vanishing Gradients]]: If weights are initialized too large, activations and gradients grow exponentially layer by layer, leading to numerical overflow (`NaN` values) or unstable updates.
+- **Vanishing Gradients:** If weights are initialized too small, activation values and gradients exponentially shrink toward zero as they pass through layers. Deep layers stop updating, and the network fails to train. In principle, this is the same problem as [[Exploding and Vanishing Gradients]].
 - **Symmetry Breaking:** Setting all weights to a constant value (such as all zeros) forces every neuron in a layer to compute the exact same output and receive the exact same gradient update. The neurons remain identical throughout training, reducing the layer's capacity to that of a single neuron.
 
 Good initialization breaks symmetry and keeps signal variance stable across layers, allowing gradients to flow effectively so the network can actually learn.

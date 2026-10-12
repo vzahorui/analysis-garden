@@ -5,3 +5,4 @@ aliases:
   - Computer Vision
   - CV
 ---
+[[Convolutional Neural Network|CNN]]

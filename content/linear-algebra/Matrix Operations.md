@@ -28,7 +28,7 @@ It's a generalization of Matrix-Vector Multiplication in which the actual operat
 
 See [[Hadamard Product]].
 
-# # Matrix Transposition
+# Matrix Transposition
 
 Transposing an $m \times n$ matrix $\mathbf{A}$, written as $\mathbf{A}^T$, swaps its rows and columns to yield an $n \times m$ matrix where $(A^T)_{ij} = A_{ji}$.
 
@@ -39,3 +39,4 @@ $$\frac{\partial L}{\partial W} = X^T \left(\frac{\partial L}{\partial Y}\right)
 
 # Other References
 * [[Frobenius Norm]]
+* [[Frobenius Inner Product]]
