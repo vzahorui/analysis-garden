@@ -35,8 +35,8 @@ _If $\gamma = \sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}$ and $\beta = \mu_{\mathc
 
 ### Key Benefits
 
-- **Faster Training:** Allows significantly higher learning rates without the risk of exploding/[[Saturation and Vanishing Gradient|vanishing gradients]].
-- **Less Sensitivity to Initialization:** Reduces reliance on precise weight initialization schemes (like Xavier or He initialization).
+- **Faster Training:** Allows significantly higher learning rates without the risk of [[Exploding and Vanishing Gradients]].
+- **Less Sensitivity to Initialization:** Reduces reliance on precise weight initialization schemes (like [[Xavier Initialization|Xavier]] or [[He Initialization|He]] initialization).
 - **Slight [[Regularization]] Effect:** Mini-batch noise acts as a mild regularizer, often reducing the need for high [[Dropout]] rates.
 - **Smoother Loss Landscape:** Smooths the optimization landscape, enabling [[gradient descent]] to take more predictable steps.
 
